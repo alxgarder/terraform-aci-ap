@@ -1,5 +1,5 @@
 output "app_name" {
-  value = var.app_name
+  value = "${random_id.app_name.hex}"
 }
 
 output "tenant_dn" {
