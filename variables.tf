@@ -10,3 +10,8 @@ variable "description" {
   description = "Description of the application."
   default = ""
 }
+
+variable "notify" {
+  description = "Notify owner"
+  default = true
+}

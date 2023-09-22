@@ -1,5 +1,6 @@
 locals {
   app_alias = "${var.app_name}"
+  sfdsdf = "${var.app_name}_sdf"
 }
 
 // To get information regarding the tenant object without children
