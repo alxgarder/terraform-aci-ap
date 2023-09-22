@@ -1,0 +1,7 @@
+module "app_{{ version | replace(".","_") }}" {
+    source = "./modules/app_{{ version | replace(".","_") }}"
+    for_each = toset(local.app_keys["{{ version | replace("_",".") }}"])
+    app_name    = local.app_name
+    tenant_name = var.ACI_TENANT
+    description = contains(keys(local.module_all[each.value]), "description") ? "${local.module_all[each.value]["description"]}" : ""
+}
