@@ -19,7 +19,7 @@ resource "random_id" "app_name" {
 resource "aci_application_profile" "app" {
   tenant_dn   = data.aci_rest.tn_info.id
   name        = "${random_id.app_name.hex}"
-  name_alias  = "${var.app_name}"
+  name_alias  = "${var.app_name}_static"
   annotation  = "automation:jet-net"
   description = "${var.description}"
   prio        = "level1"
