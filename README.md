@@ -5,6 +5,6 @@ Terraform module to create application profile. Not for production use.
 module "application" {
     source = "alxgarder/terraform/aci/ap"
     app_name = "<My Name>"
-    description = "<My Description>
+    description = "<My Description>"
 }
 ```
